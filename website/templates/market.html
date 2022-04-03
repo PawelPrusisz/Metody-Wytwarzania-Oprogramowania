@@ -1,0 +1,317 @@
+{% extends "base.html" %} {% block title %}Market{% endblock %} {% block content
+%}
+
+
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Mine Market</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Your Money: {{user.money}}$</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <!-- row-cols-xl-5  change column size-->
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-3 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100 bg-dark mb-3">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark position-absolute text-white" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                        <!-- Product image-->
+                        <img class="card-img-top  bg-light" src = "{{ url_for('static', filename='assets/goldpic.jpg')}}" height="350" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Golden Pickaxe</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$1000.00</span>
+                                $777.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center textlight"><a class="btn btn-outline-light mt-auto" id="1">Buy It</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col mb-5">
+                    <div class="card h-100 bg-dark mb-3">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark position-absolute text-white" style="top: 0.5rem; right: 0.5rem"></div>
+                        <!-- Product image-->
+                        <img class="card-img-top  bg-light" src = "{{ url_for('static', filename='assets/lamp.jpg')}}" height="350"  alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Lamp</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $25.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center textlight"><a class="btn btn-outline-light mt-auto" id="2">Buy It</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100 bg-dark mb-3">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark position-absolute text-white" style="top: 0.5rem; right: 0.5rem"></div>
+                        <!-- Product image-->
+                        <img class="card-img-top  bg-light" src = "{{ url_for('static', filename='assets/torch.jpg')}}"height="350"  alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Torch</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $10.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center textlight"><a class="btn btn-outline-light mt-auto" id="3">Buy It</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100 bg-dark mb-3">
+                        <!-- Product image-->
+                        <img class="card-img-top  bg-light" src = "{{ url_for('static', filename='assets/epic.jpg')}}"height="350"  alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Magic Pickaxe</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $3333.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center textlight"><a class="btn btn-outline-light mt-auto" id="4">Buy It</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100 bg-dark mb-3">
+
+                        <!-- Product image-->
+                        <img class="card-img-top  bg-light" src = "{{ url_for('static', filename='assets/sword.jpg')}}" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Fire Sword</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                $18.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center textlight"><a class="btn btn-outline-light mt-auto"id="5" >Buy It</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100 bg-dark mb-3">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark position-absolute text-white" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                        <!-- Product image-->
+                        <img class="card-img-top  bg-light" width="200"  height="350" 
+                        src = "{{ url_for('static', filename='assets/stonepic.jpg')}}"    alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Stone Pickaxe</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$20.00</span>
+                                $19.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center textlight"><a class="btn btn-outline-light mt-auto" id="6" >Buy It</a></div>
+                        </div>
+                    </div>
+                </div>
+
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Pwr</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var n = 6
+        var items = new Array(n)
+        
+        function item(name, price) {
+            this.name = name
+            this.price = price;
+        }
+
+        items[0] = new item("Golden Pickaxe", 777)
+        items[1] = new item("Lamp", 25)
+        items[2] = new item("Torch", 10)
+        items[3] = new item("Magic Pickaxe", 3333)
+        items[4] = new item("Fire Sword", 18)
+        items[5] = new item("Stone Pickaxe", 19)
+
+        console.log(items)
+        $('#6').click(function() {
+            console.log("Buying 6")
+            var n = 6 - 1
+            var name = '{{user.first_name}}'
+            var money = '{{user.money}}'
+            var res = money - 1
+            console.log(money,  items[n].price)
+            if(money>= items[n].price){ 
+                location.href  = "/{{user.first_name}}/19/Stone_Pickaxe"
+            }
+        });
+
+        $('#5').click(function() {
+            console.log("Buying 5")
+            var n = 5 - 1
+            var name = '{{user.first_name}}'
+            var money = '{{user.money}}'
+            var res = money - 1
+            console.log(money,  items[n].price)
+            if(money>= items[n].price){ 
+                location.href  = "/{{user.first_name}}/18/Fire_Sword"
+            }
+            else{
+                console.log("u need more money")
+            }
+        });
+        
+        $('#4').click(function() {
+            console.log("Buying 4")
+            var n = 4 - 1
+            var name = '{{user.first_name}}'
+            var money = '{{user.money}}'
+            var res = money - 1
+            console.log(money,  items[n].price)
+            if(money>= items[n].price){ 
+                location.href  = "/{{user.first_name}}/3333/Magic_Pickaxe"
+                //window.location.reload()
+            }
+            else{
+                console.log("u need more money")
+            }
+        });
+        $('#3').click(function() {
+            console.log("Buying 3")
+            var n = 3 - 1
+
+            var name = '{{user.first_name}}'
+            var money = '{{user.money}}'
+            var res = money - 1
+            console.log(money,  items[n].price)
+            if(money>= items[n].price){ 
+                location.href  = "/{{user.first_name}}/10/Torch"
+                //window.location.reload()
+            }
+            else{
+                console.log("u need more money")
+            }
+        });
+        $('#2').click(function() {
+            console.log("Buying 2")
+            var n = 2 - 1
+
+            var name = '{{user.first_name}}'
+            var money = '{{user.money}}'
+            var res = money - 1
+            console.log(money,  items[n].price)
+            if(money>= items[n].price){ 
+                location.href  = "/{{user.first_name}}/25/Lamp"
+                //window.location.reload()
+            }
+            else{
+                console.log("u need more money")
+            }
+        });
+
+        $('#1').click(function() {
+            console.log("Buying 1")
+            var n = 1 - 1
+            var name = '{{user.first_name}}'
+            var money = '{{user.money}}'
+            var res = money - 1
+            console.log(money,  items[n].price)
+            if(money>= items[n].price){ 
+                location.href  = "/{{user.first_name}}/777/Golden Pickaxe"
+                //window.location.reload()
+            }
+            else{
+                console.log("u need more money")
+            }
+        });
+
+
+
+    </script>
+
+
+
+
+{% endblock %}
